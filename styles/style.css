@@ -1,0 +1,20 @@
+.line-through {
+  text-decoration: line-through;
+}
+
+.done {
+  order: 2;
+}
+
+#section__checklist {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid-item {
+  grid-template-columns: auto 10%;
+}
+
+div:hover {
+  cursor: pointer;
+}
