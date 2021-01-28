@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .line-through {
   text-decoration: line-through;
 }
@@ -12,7 +16,7 @@
 }
 
 .grid-item {
-  grid-template-columns: auto 10%;
+  grid-template-columns: auto 10% 10%;
 }
 
 div:hover {
