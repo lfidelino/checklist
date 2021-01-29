@@ -58,7 +58,12 @@ var editItem = (edit) => {
 
 var removeItem = (remove) => {
   var confirmRemove = window.confirm("Delete checklist item?");
-  if (confirmRemove) remove.parentElement.remove();
+
+  if (confirmRemove) {
+    remove.parentElement.classList.add("animate__animated");
+    remove.parentElement.classList.add("animate__fadeOutUp");
+    setTimeout(() => remove.parentElement.remove(), 500);
+  }
 };
 
 // NOTE Add event listeners
