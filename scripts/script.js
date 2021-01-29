@@ -8,18 +8,19 @@ var addChecklistItem = () => {
   if (inputText.value) {
     // NOTE Create elements
     var checklistItem = document.createElement("div");
-    checklistItem.classList = "grid grid-item";
+    checklistItem.classList = "checklistItem grid grid-item py-1";
 
     var item = document.createElement("div");
     var textItem = document.createTextNode(inputText.value.trim());
+    item.classList = "px-2";
 
     var edit = document.createElement("div");
-    edit.classList = "flex justify-center hover:text-yellow-400";
+    edit.classList = "flex justify-center hover:text-green-600";
     var iconEdit = document.createElement("i");
     iconEdit.classList = "far fa-edit";
 
     var remove = document.createElement("div");
-    remove.classList = "flex justify-center hover:text-red-400";
+    remove.classList = "flex justify-center hover:text-red-600";
     var iconRemove = document.createElement("i");
     iconRemove.classList = "far fa-trash-alt";
 

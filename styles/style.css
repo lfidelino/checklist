@@ -1,13 +1,16 @@
 body {
   font-family: "Roboto", sans-serif;
+  background: #0f0c29;
+  background: -webkit-gradient(linear, left top, right top, from(#24243e), color-stop(#302b63), to(#0f0c29));
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+#header__title {
+  font-family: "Roboto Slab", serif;
 }
 
 .line-through {
   text-decoration: line-through;
-}
-
-.done {
-  order: 2;
 }
 
 #section__checklist {
@@ -15,17 +18,53 @@ body {
   word-break: break-all;
 }
 
-.grid-item {
-  grid-template-columns: auto 15% 15%;
+#section__checklist:empty {
+  display: none;
+}
+
+.checklistItem {
+  -ms-grid-columns: auto 15% 15%;
+      grid-template-columns: auto 15% 15%;
+}
+
+.checklistItem:nth-child(2n + 1) {
+  background-color: #fcd34d;
+}
+
+.checklistItem:nth-child(2n) {
+  background-color: #e8bf4d;
+}
+
+.checklistItem:nth-child(2n + 1).done {
+  background-color: rgba(252, 211, 77, 0.75);
+}
+
+.checklistItem:nth-child(2n).done {
+  background-color: rgba(232, 191, 77, 0.75);
+}
+
+.checklistItem:hover {
+  cursor: pointer;
+  background-color: #fbbf24;
+}
+
+.checklistItem:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.checklistItem:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 @media only screen and (min-width: 640px) {
   #section__checklist {
     width: 85%;
   }
-
   .grid-item {
-    grid-template-columns: auto 8% 8%;
+    -ms-grid-columns: auto 8% 8%;
+        grid-template-columns: auto 8% 8%;
   }
 }
 
@@ -33,9 +72,9 @@ body {
   #section__checklist {
     width: 75%;
   }
-
   .grid-item {
-    grid-template-columns: auto 7.5% 7.5%;
+    -ms-grid-columns: auto 7.5% 7.5%;
+        grid-template-columns: auto 7.5% 7.5%;
   }
 }
 
@@ -43,9 +82,9 @@ body {
   #section__checklist {
     width: 50%;
   }
-
   .grid-item {
-    grid-template-columns: auto 4.5% 4.5%;
+    -ms-grid-columns: auto 4.5% 4.5%;
+        grid-template-columns: auto 4.5% 4.5%;
   }
 }
 
@@ -53,12 +92,9 @@ body {
   #section__checklist {
     width: 33.33%;
   }
-
   .grid-item {
-    grid-template-columns: auto 3.66% 3.66%;
+    -ms-grid-columns: auto 3.66% 3.66%;
+        grid-template-columns: auto 3.66% 3.66%;
   }
 }
-
-div:hover {
-  cursor: pointer;
-}
+/*# sourceMappingURL=style.css.map */
