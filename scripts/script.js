@@ -39,10 +39,10 @@ var addChecklistItem = () => {
     checklistItem.appendChild(remove);
 
     checklist.appendChild(checklistItem);
-
-    inputText.value = "";
-    inputText.focus();
   }
+
+  inputText.value = "";
+  inputText.focus();
 };
 
 // NOTE Event functions
