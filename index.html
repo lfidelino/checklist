@@ -25,26 +25,35 @@
       <h1 class="pt-10 text-6xl text-center text-yellow-400 font-bold">CHECKLIST</h1>
     </header>
 
-    <section id="section__add-item" class="flex justify-center mt-8">
-      <input
-        type="text"
-        name="text"
-        id="input__text"
-        class="py-1 px-4 border-2 border-yellow-400 border-r-0 bg-gray-800 text-yellow-400 text-xl sm:text-2xl lg:text-3xl focus:outline-none rounded-l-full"
-      /><button
-        id="button__add"
-        class="px-4 border-2 border-yellow-400 text-yellow-400 text-xl sm:text-2xl lg:text-3xl rounded-r-full focus:outline-none active:outline-none bg-gray-800 hover:bg-gray-900"
-      >
-        Add
-      </button>
-    </section>
+    <main class="pb-24">
+      <section id="section__add-item" class="flex justify-center mt-8">
+        <input
+          type="text"
+          name="text"
+          id="input__text"
+          class="py-1 px-4 border-2 border-yellow-400 border-r-0 bg-gray-800 text-yellow-400 text-xl sm:text-2xl lg:text-3xl focus:outline-none rounded-l-full"
+        /><button
+          id="button__add"
+          class="px-4 border-2 border-yellow-400 text-yellow-400 text-xl sm:text-2xl lg:text-3xl rounded-r-full focus:outline-none active:outline-none bg-gray-800 hover:bg-gray-900"
+        >
+          Add
+        </button>
+      </section>
 
-    <section class="flex justify-center mt-6">
-      <section
-        class="grid w-full mx-5 text-xl sm:text-2xl 2xl:text-3xl border-4 border-yellow-500 border-opacity-75 shadow-xl rounded-xl"
-        id="section__checklist"
-      ></section>
-    </section>
+      <section class="flex justify-center mt-6">
+        <section
+          class="grid w-full mx-5 text-xl sm:text-2xl 2xl:text-3xl border-4 border-yellow-500 border-opacity-75 shadow-xl rounded-xl"
+          id="section__checklist"
+        ></section>
+      </section>
+    </main>
+
+    <footer id="footer" class="bg-yellow-300 w-full text-center">
+      <span class="text-xs">&#169; 2021 Lawrence Fidelino</span> •
+      <a href="https://www.github.com/lfidelino" target="_blank" class="text-xs text-purple-900">GitHub</a> •
+      <a href="https://www.codepen.io/lfidelino" target="_blank" class="text-xs text-purple-900">CodePen</a> •
+      <a href="https://www.dev.to/lfidelino" target="_blank" class="text-xs text-purple-900">DEV.to</a>
+    </footer>
 
     <script src="scripts/script.js"></script>
   </body>

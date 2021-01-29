@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
+  position: relative;
+  min-height: 100vh;
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -89,4 +91,10 @@ body {
   .grid-item {
     grid-template-columns: auto 3.66% 3.66%;
   }
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
