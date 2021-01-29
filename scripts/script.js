@@ -39,13 +39,6 @@ var addChecklistItem = () => {
     checklistItem.appendChild(remove);
 
     checklist.appendChild(checklistItem);
-    document.documentElement.style.setProperty("--animate-duration", "0.25s");
-    checklistItem.classList.add("animate__animated");
-    checklistItem.classList.add("animate__zoomIn");
-    setTimeout(() => {
-      checklistItem.classList.remove("animate__animated");
-      checklistItem.classList.remove("animate__zoomIn");
-    }, 250);
   }
 
   inputText.value = "";
@@ -59,28 +52,17 @@ var linethroughItem = (item) => {
 };
 
 var editItem = (edit) => {
-  var oldText = edit.parentElement.childNodes[0].innerText;
   var text = prompt("Edit your checklist item.", edit.parentElement.childNodes[0].innerText);
-  if (text && text != oldText) {
-    edit.parentElement.childNodes[0].innerText = text;
-    document.documentElement.style.setProperty("--animate-duration", "0.15s");
-    edit.parentElement.classList.add("animate__animated");
-    edit.parentElement.classList.add("animate__pulse");
-    setTimeout(() => {
-      edit.parentElement.classList.remove("animate__animated");
-      edit.parentElement.classList.remove("animate__pulse");
-    }, 150);
-  }
+  if (text) edit.parentElement.childNodes[0].innerText = text;
 };
 
 var removeItem = (remove) => {
   var confirmRemove = window.confirm("Delete checklist item?");
 
   if (confirmRemove) {
-    document.documentElement.style.setProperty("--animate-duration", "0.25s");
     remove.parentElement.classList.add("animate__animated");
     remove.parentElement.classList.add("animate__fadeOutUp");
-    setTimeout(() => remove.parentElement.remove(), 250);
+    setTimeout(() => remove.parentElement.remove(), 500);
   }
 };
 
