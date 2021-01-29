@@ -23,17 +23,16 @@
     </header>
 
     <section id="section__add-item" class="flex justify-center mt-8">
-      <input type="text" name="text" id="input__text" class="border-2 border-r-0 border-black text-2xl" /><button
-        id="button__add"
-        class="border-2 border-black text-2xl"
-      >
-        Add
-      </button>
+      <input
+        type="text"
+        name="text"
+        id="input__text"
+        class="border-2 border-r-0 border-black text-xl sm:text-2xl focus:outline-none"
+      /><button id="button__add" class="border-2 border-black text-xl sm:text-2xl">Add</button>
     </section>
 
-    <!-- TODO Media query -->
     <section class="flex justify-center mt-6">
-      <section class="grid w-1/6 text-3xl" id="section__checklist"></section>
+      <section class="grid w-full px-5 text-xl sm:text-2xl 2xl:text-3xl" id="section__checklist"></section>
     </section>
 
     <script src="scripts/script.js"></script>
