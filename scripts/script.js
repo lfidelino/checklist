@@ -14,12 +14,12 @@ var addChecklistItem = () => {
     var textItem = document.createTextNode(inputText.value.trim());
 
     var edit = document.createElement("div");
-    edit.classList = "flex justify-end";
+    edit.classList = "flex justify-center hover:text-yellow-400";
     var iconEdit = document.createElement("i");
     iconEdit.classList = "far fa-edit";
 
     var remove = document.createElement("div");
-    remove.classList = "flex justify-end";
+    remove.classList = "flex justify-center hover:text-red-400";
     var iconRemove = document.createElement("i");
     iconRemove.classList = "far fa-trash-alt";
 

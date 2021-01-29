@@ -16,7 +16,47 @@ body {
 }
 
 .grid-item {
-  grid-template-columns: auto 10% 10%;
+  grid-template-columns: auto 15% 15%;
+}
+
+@media only screen and (min-width: 640px) {
+  #section__checklist {
+    width: 85%;
+  }
+
+  .grid-item {
+    grid-template-columns: auto 8% 8%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #section__checklist {
+    width: 75%;
+  }
+
+  .grid-item {
+    grid-template-columns: auto 7.5% 7.5%;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  #section__checklist {
+    width: 50%;
+  }
+
+  .grid-item {
+    grid-template-columns: auto 4.5% 4.5%;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  #section__checklist {
+    width: 33.33%;
+  }
+
+  .grid-item {
+    grid-template-columns: auto 3.66% 3.66%;
+  }
 }
 
 div:hover {
