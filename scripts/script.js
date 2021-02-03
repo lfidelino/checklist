@@ -1,27 +1,27 @@
-var inputText = document.getElementById('input__text');
-var btnAdd = document.getElementById('button__add');
-var checklist = document.getElementById('section__checklist');
+const inputText = document.getElementById('input__text');
+const btnAdd = document.getElementById('button__add');
+const checklist = document.getElementById('section__checklist');
 
 inputText.focus();
 
-var addChecklistItem = () => {
+const addChecklistItem = () => {
   if (inputText.value) {
     // NOTE Create elements
-    var checklistItem = document.createElement('div');
+    const checklistItem = document.createElement('div');
     checklistItem.classList = 'checklistItem grid grid-item py-1';
 
-    var item = document.createElement('div');
-    var textItem = document.createTextNode(inputText.value.trim());
+    const item = document.createElement('div');
+    const textItem = document.createTextNode(inputText.value.trim());
     item.classList = 'px-2';
 
-    var edit = document.createElement('div');
+    const edit = document.createElement('div');
     edit.classList = 'flex justify-center hover:text-green-600';
-    var iconEdit = document.createElement('i');
+    const iconEdit = document.createElement('i');
     iconEdit.classList = 'far fa-edit';
 
-    var remove = document.createElement('div');
+    const remove = document.createElement('div');
     remove.classList = 'flex justify-center hover:text-red-600';
-    var iconRemove = document.createElement('i');
+    const iconRemove = document.createElement('i');
     iconRemove.classList = 'far fa-trash-alt';
 
     // NOTE Add event listeners
@@ -53,14 +53,14 @@ var addChecklistItem = () => {
 };
 
 // NOTE Event functions
-var linethroughItem = (item) => {
+const linethroughItem = (item) => {
   item.classList.toggle('line-through');
   item.parentElement.classList.toggle('done');
 };
 
-var editItem = (edit) => {
-  var oldText = edit.parentElement.childNodes[0].innerText;
-  var text = prompt('Edit your checklist item.', edit.parentElement.childNodes[0].innerText);
+const editItem = (edit) => {
+  const oldText = edit.parentElement.childNodes[0].innerText;
+  const text = prompt('Edit your checklist item.', edit.parentElement.childNodes[0].innerText);
   if (text && text != oldText) {
     edit.parentElement.childNodes[0].innerText = text;
     document.documentElement.style.setProperty('--animate-duration', '0.15s');
@@ -73,8 +73,8 @@ var editItem = (edit) => {
   }
 };
 
-var removeItem = (remove) => {
-  var confirmRemove = window.confirm('Delete checklist item?');
+const removeItem = (remove) => {
+  const confirmRemove = window.confirm('Delete checklist item?');
 
   if (confirmRemove) {
     document.documentElement.style.setProperty('--animate-duration', '0.25s');
