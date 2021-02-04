@@ -1,3 +1,3 @@
 # checklist
 
-View on [CodePen](https://codepen.io/lfidelino/pen/dyOyOZB).
+View on [GitHub](https://lfidelino.github.io/checklist/) or [CodePen](https://codepen.io/lfidelino/pen/dyOyOZB).
