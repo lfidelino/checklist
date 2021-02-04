@@ -25,7 +25,7 @@ const addChecklistItem = () => {
     iconRemove.classList = 'far fa-trash-alt';
 
     // NOTE Add event listeners
-    item.addEventListener('click', () => linethroughItem(item));
+    item.addEventListener('click', () => completeItem(item));
     edit.addEventListener('click', () => editItem(edit));
     remove.addEventListener('click', () => removeItem(remove));
 
@@ -53,7 +53,7 @@ const addChecklistItem = () => {
 };
 
 // NOTE Event functions
-const linethroughItem = (item) => {
+const completeItem = (item) => {
   item.classList.toggle('line-through');
   item.parentElement.classList.toggle('done');
 };
